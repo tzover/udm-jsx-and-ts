@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+    app:
+        image: jsx_lesson:1.0
+        container_name: jsx_lesson
+        build:
+            context: .
+            dockerfile: Dockerfile
+        volumes:
+            - ./app:/home/app
+            # - ./app/src:/home/app/src
+            # - ./app/public:/home/app/public
+        ports:
+            - $PORT:3000
+        tty: true
